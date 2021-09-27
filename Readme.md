@@ -1,0 +1,1 @@
+As I have been learning react for some time and i have learned lots of core concepts like hooks ,custom hooks,side effects,redux,router now i am joining all together and trying to built netflix clone as practice project.
