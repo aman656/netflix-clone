@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react"
 import urls from "../allurls"
-import './Banner.css'
+import './Banner.css';
 
 
 const Banner = ()=>{
-    const [toDisplay,settoDisplay]  =  useState([])
+    const [toDisplay,settoDisplay]  =  useState([]);
 
     useEffect(()=>{
             const recieving = async()=>{
-                const response = await fetch(`https://api.themoviedb.org/3${urls.netflixOrignals}`)
+                const response = await fetch(`https://api.themoviedb.org/3${urls.netflixOrignals}`);
                 if(!response.ok){
                     throw new Error("Something went wrong")
                 }
