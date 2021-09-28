@@ -1,0 +1,39 @@
+.main{
+    margin-left: 2rem;
+    color: black;
+}
+
+.inside_poster{
+    object-fit: contain;
+    width: 100%;
+    max-height: 120px;
+    margin-right: 0.8rem;
+    transition: tranform 450ms;
+    
+
+}
+.inside_posterlarge{
+    max-height: 200px;
+}
+
+.posters{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+    
+
+}
+.posters::-webkit-scrollbar{
+    display: none;
+}
+.inside_poster:hover{
+    transform:  scale(1.1);
+}
+.inside_posterlarge{
+    max-height: 250px;
+    padding: 5px;
+}
+.inside_posterlarge:hover{
+    transform:  scale(1.1);
+}
