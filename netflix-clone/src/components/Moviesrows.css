@@ -31,7 +31,7 @@
     transform:  scale(1.1);
 }
 .inside_posterlarge{
-    max-height: 250px;
+    max-height: 251px;
     padding: 5px;
 }
 .inside_posterlarge:hover{
