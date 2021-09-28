@@ -2,14 +2,14 @@ import { useEffect, useState } from "react"
 import './Moviesrows.css'
 
 const MoviesRows = (props)=>{
-    const [movieslist,setMoviesList] = useState([])
+    const [movieslist,setMoviesList] = useState([]);
     useEffect(()=>{
         const recieving = async()=>{
-            const response = await fetch(`https://api.themoviedb.org/3${props.tofetch}`)
+            const response = await fetch(`https://api.themoviedb.org/3${props.tofetch}`);
             if(!response.ok){
                 throw new Error("Something went wrong")
             }
-            const data = await response.json()
+            const data = await response.json();
             setMoviesList(data.results)
         }
         recieving()
