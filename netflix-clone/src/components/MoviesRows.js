@@ -12,6 +12,7 @@ const MoviesRows = (props)=>{
             const data = await response.json();
             setMoviesList(data.results)
         }
+
         recieving()
     },[props.tofetch])
     return <div className="main">

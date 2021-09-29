@@ -19,6 +19,9 @@ const Banner = ()=>{
         
     },[])
     console.log(toDisplay)
+    function cuttingdescription(str,n){
+        return str?.length>n ? str.substr(0,n-1) + "..." : str;
+    }
 
     return(
         <header className="midmain" style={{
@@ -32,9 +35,10 @@ const Banner = ()=>{
                 <button className="btn">Play</button>
                 <button className="btn">My List</button>
             </div>
-            <h1 className="description">{toDisplay?.overview}</h1>
+            <h1 className="description">{cuttingdescription(toDisplay?.overview,150)}</h1>
 
         </div>
+        <div className="fading"    />
         </header>
     )
 
