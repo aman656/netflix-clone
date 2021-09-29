@@ -1,4 +1,5 @@
 import React from 'react'
+import Navigation from './components/Navigation';
 import MoviesRows from './components/MoviesRows';
 import Banner from './components/Banner';
 import './App.css';
@@ -7,6 +8,7 @@ import urls from './allurls';
 function App() {
   return (
     <div className="App">
+     <Navigation/> 
        <Banner/> 
       <MoviesRows  title = {"NETFLIX ORIGNALS"}  tofetch = {urls.netflixOrignals} backdrop/>
       <MoviesRows  title = {"TRENDING NOW"}  tofetch = {urls.trending} />
