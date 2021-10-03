@@ -1,0 +1,134 @@
+body{
+    background-image: url("C:\Users\amans\OneDrive\Desktop\netflix-clone\netflix-clone\src\assets\back.jpg");
+}
+ 
+.head{
+    width: 100%;
+  
+    padding-top: 5px;
+
+
+}
+.head img{
+   padding-left: 20px;
+    height: 70px;
+    width: 175px;
+} 
+.signinform{
+    background-color: rgba(0,0,0, 0.75);
+    color: #fff;
+    max-width: 25rem;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 60px 68px 40px;
+}
+.signinform h1{
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+.signinform input{
+    width: 100%;
+    height: 48px;
+    background-color: #333;
+    border-radius: 4px;
+    border: 0;
+    color: #fff;
+ padding: 16px 20px 0;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+  
+    outline: none !important;
+
+}
+.signinform input:focus{
+    background-color: rgb(41, 40, 40);
+}
+.signinform button{
+    width: 100%;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 24px 0 12px;
+    background-color: #e50914;
+    padding: 14px;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+.end{
+    display: flex; 
+    justify-content: space-between;
+
+}
+.ending{
+    display: flex;
+    color: #b3b3b3;
+    margin-bottom: 20px;
+
+   
+  
+}
+.ending input ,h5{
+    color: #b3b3b3;
+
+    font-size: 13px;
+line-height: 1.2;
+    font-weight: 500;
+    height: 20px; 
+    width: 16px;
+     border: none; 
+     margin-right: 4px;
+    
+     padding: 0;
+}
+
+.ending h5{
+    padding-top: 1.5px;
+    font-size: 14px;
+    width:100px;
+}
+
+.end p{
+    color: #b3b3b3;
+}
+.lastpara{
+    color: #b3b3b3;
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+.lastanc{
+    color: #fff;
+    margin-left: 4px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.lastanc:hover{
+    text-decoration: #fff;
+}
+@media (max-width:660px) {
+    body{
+        background-color: rgba(0,0,0, 0.75);
+        background-color: #000000;
+       
+        background-image: none;
+      
+    }
+    .signinform{
+        width: 90%;
+        padding: 15px 20px 5px;
+    }
+    .signinform input{
+        width: 100%;
+    }
+    .signinform button{
+        width: 100%;
+    };
+    
+}
