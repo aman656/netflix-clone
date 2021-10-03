@@ -1,24 +1,33 @@
 import React from 'react'
 import Navigation from './components/Navigation';
-import MoviesRows from './components/MoviesRows';
-import Banner from './components/Banner';
+// import MoviesRows from './components/MoviesRows';
+// import Banner from './components/Banner';
 import './App.css';
-import urls from './allurls';
+// import urls from './allurls';
+import MidPage from './Pages/MidPage';
+import Home from './Pages/Home';
+import {Route,Switch} from "react-router-dom"
+import Authentication from './Pages/Auth';
+
 
 function App() {
   return (
     <div className="App">
-     <Navigation/> 
-       <Banner/> 
-      <MoviesRows  title = {"NETFLIX ORIGNALS"}  tofetch = {urls.netflixOrignals} backdrop/>
-      <MoviesRows  title = {"TRENDING NOW"}  tofetch = {urls.trending} />
-      <MoviesRows  title = {"TOP RATED"}  tofetch = {urls.topRated} />
-      <MoviesRows  title = {"ACTION MOVIES"}  tofetch = {urls.actionMovies} />
-      <MoviesRows  title = {"COMEDY MOVIES"}  tofetch = {urls.comedyMovies} />
-      <MoviesRows  title = {"HORROR MOVIES"}  tofetch = {urls.horrorMovies} />
-      <MoviesRows  title = {"ROMANCE MOVIES"}  tofetch = {urls.romanceMovies} />
-      <MoviesRows  title = {"DOCUMENTRIES"}  tofetch = {urls.documentries} />
+     {/* <Navigation/>  */}
+     <Switch>
+       <Route path="/" exact >
+         <Home/>
 
+
+       </Route>
+       <Route path="/mid">
+     <MidPage />
+     </Route>
+     <Route path="/auth">
+       <Authentication/>
+
+     </Route>
+     </Switch>
 
     </div>
   );
