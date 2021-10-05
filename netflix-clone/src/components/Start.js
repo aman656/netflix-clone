@@ -1,7 +1,7 @@
 import logo from '../assets/logo.png'
 import './Start.css'
 import { Fragment,useRef } from 'react'
-import {useSelector,useDispatch} from "react-redux"
+import {useDispatch} from "react-redux"
 import { authActions } from '../store'
 import { useHistory } from 'react-router'
 
@@ -25,7 +25,7 @@ const Start = ()=>{
             </nav>
             <div className ="startmid">
                 <h2>Unlimited movies,TV <br/>shows, and more.</h2>
-                <h5>Watch anywhere. Cancel anytime.</h5>
+                <h4>Watch anywhere. Cancel anytime.</h4>
                 <p>Ready to watch? Enter your email to create or restart your membership.</p>
                
                     <form onSubmit={submitHandler} className="last">

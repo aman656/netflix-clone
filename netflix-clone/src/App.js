@@ -13,7 +13,7 @@ import Authentication from './Pages/Auth';
 function App() {
   return (
     <div className="App">
-     {/* <Navigation/>  */}
+   
      <Switch>
        <Route path="/" exact >
          <Home/>
@@ -21,6 +21,7 @@ function App() {
 
        </Route>
        <Route path="/mid">
+     <Navigation/>  
      <MidPage />
      </Route>
      <Route path="/auth">

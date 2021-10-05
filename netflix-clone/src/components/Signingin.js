@@ -1,28 +1,66 @@
 import logo3 from "../assets/logo3.png"
-import './Signingin.css'
+import BodyClassName from "react-body-classname"
 import { Fragment } from "react"
-import { useState } from "react"
+import { useState,useRef} from "react"
+import { useDispatch } from "react-redux"
+import { useHistory } from "react-router"
+
+import classes from './Signing.module.css'
+
+
+import { loggingIn,signingUp } from "../store"
 
 const Signing = (props)=>{
     const [islogin,setislogin] = useState(false);
+    const emailRef = useRef()
+    const passRef = useRef()
     const loginToggler = ()=>{
         setislogin(previous=>
             !previous
         )
     }
+  
+
+
+
+    const dispatch = useDispatch()
+    const history = useHistory()
+    const submitHandler = ()=>{
+        const email = emailRef.current.value;
+        const password = passRef.current.value
+        if(islogin){
+            dispatch(loggingIn("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDkXTrixg_1Ug9KHA8cJ1fSpoweZYLQI-g",email,password,history,islogin))
+        }
+        else{
+           dispatch(signingUp("https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDkXTrixg_1Ug9KHA8cJ1fSpoweZYLQI-g",email,password)).then((res)=>{
+               if(res.ok){
+              return res.json()
+
+               }else{
+                   throw new Error("Something went wrong!")
+
+               }
+           }).then((data)=>{
+               setislogin(true)
+           }).catch((err)=>{
+               alert(err.message)
+           })
+        }
+    }
 
     return(
-        <Fragment>
-         <div className="head">
+  
+        <body className={classes.body}>
+         <div className={classes.head}>
             <img    src={logo3}  alt="LOGO"/>
         </div> 
-        <div className="signinform">
+        <div className={classes.signinform}>
             <h1>{islogin ? "Sign In" : "Sign Up"}</h1>
-            <input type="email" value={props.email} />
-            <input/>
-            <button>{islogin ? "Sign In":"Sign Up"}</button>
-            <div className="end">
-            <div className="ending">
+            <input type="email" defaultValue={props.email} ref={emailRef} />
+            <input  type="password" ref={passRef}   />
+            <button onClick={submitHandler} >{islogin ? "Sign In":"Sign Up"}</button>
+            <div className={classes.end}>
+            <div className={classes.ending}>
                 
               
                  <input type="checkbox" name="Remember me"/> 
@@ -31,12 +69,15 @@ const Signing = (props)=>{
             </div>
            <p>Need Help?</p>
         </div>
-        <div className="lastpara" style={{display:"flex"}}>
-        {islogin?" New to netflix?":"Already a member?"} <a href="#" onClick={loginToggler} className="lastanc">{islogin?"Sign up now.":"Login now."}</a> 
+        <div className={classes.lastpara} style={{display:"flex"}}>
+        {islogin?" New to netflix?":"Already a member?"} <p href="#" onClick={loginToggler} className={classes.lastanc}>{islogin?"Sign up now.":"Login now."}</p> 
         </div>
         </div>
+        <div className={classes.need}></div>
+        </body>
        
-        </Fragment>
+       
+    
     )
 }
 

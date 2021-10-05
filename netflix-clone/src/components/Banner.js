@@ -24,10 +24,12 @@ const Banner = ()=>{
     }
 
     return(
+     
         <header className="midmain" style={{
             backgroundSize:"cover",
             backgroundImage:`url("httPS://image.tmdb.org/t/p/original/${toDisplay.backdrop_path}")`,
-            backgroundPosition:"center center"
+            backgroundPosition:"center center",
+            backgroundColor:"#111"
         }}>
         <div className="inside_content">
             <h1 className="banner_head">{toDisplay?.name || toDisplay?.title || toDisplay?.original_name}</h1>
@@ -40,6 +42,7 @@ const Banner = ()=>{
         </div>
         <div className="fading"    />
         </header>
+
     )
 
 }
