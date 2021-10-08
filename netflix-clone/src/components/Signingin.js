@@ -1,4 +1,4 @@
-import logo3 from "../assets/logo3.png";
+import logo3 from '/logo3.png';
 import { Fragment } from "react"
 import { useState,useRef} from "react"
 import { useDispatch } from "react-redux"

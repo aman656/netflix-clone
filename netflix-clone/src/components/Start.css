@@ -1,5 +1,5 @@
 .start{
-    background-image: url("netflix-clone\src\assets\back.png");
+    background-image: url("/back.png");
     border-bottom: 10px solid #222 ;
    
 }

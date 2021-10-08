@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png'
+import logo from '/logo.png'
 import './Start.css'
 import { Fragment,useRef } from 'react'
 import {useDispatch} from "react-redux"
